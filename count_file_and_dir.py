@@ -1,5 +1,5 @@
 import os
-import ask_for_path
+
 
 def count_files_and_directories(path):
     # Initialize counters
@@ -22,14 +22,14 @@ def count_files_and_directories(path):
 
     return total_files, total_dirs
 
-def print_count():
-# Call the function to count files and directories
+def print_count(path):
+    # Call the function to count files and directories
     file_count, dir_count = count_files_and_directories(path)
 
-# Print the total number of files and directories
+    # Print the total number of files and directories
     print("Total files:", file_count)
     print("Total directories:", dir_count)
 
 # Ask for path
-path = ask_for_path.ask()
-print_count()
+path = input("Enter Path: ")  # Ask user for path
+print_count(path)
