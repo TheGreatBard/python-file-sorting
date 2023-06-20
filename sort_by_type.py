@@ -1,6 +1,6 @@
 import os
 import shutil
-import ask_for_path
+
 
 def sort_by_type(path):
     files = os.listdir(path) #get list of files in the directory 
@@ -15,5 +15,5 @@ def sort_by_type(path):
             print(f"{extension} directory has been created")#Print the name of the new directory
             shutil.move(path+'/'+file, path+'/'+extension+'/'+file) #after making the new directory moves the file to that directory 
 
-path = ask_for_path.ask() 
+path = input("Enter Path: ") #Ask user for path 
 sort_by_type(path)

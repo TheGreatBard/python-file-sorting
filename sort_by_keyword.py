@@ -1,6 +1,6 @@
 import os
 import shutil
-import ask_for_path
+
 
 def move_files_with_keyword(path, keyword):
     for root, dirs, files in os.walk(path):
@@ -23,7 +23,7 @@ def move_files_with_keyword(path, keyword):
                 print(f"Moved: {filename} -> {target_file}")
 
 def key():
-    path = ask_for_path.ask()
+    path = input("Enter Path: ") #Ask user for path
     keyword = input("Enter the keyword: ")
     
     move_files_with_keyword(path, keyword)

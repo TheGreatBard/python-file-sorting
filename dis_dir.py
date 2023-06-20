@@ -1,6 +1,6 @@
 import os
 import shutil
-import ask_for_path
+
 
 def move_files(directory):
     for root, dirs, files in os.walk(directory):
@@ -41,6 +41,6 @@ def print_dir():
     else:
         print("No empty directories found.")
 
-path = ask_for_path.ask()
+path = input("Enter Path: ") #Ask user for path
 move_files(path)
 removed_directories = remove_empty_dirs(path)

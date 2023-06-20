@@ -4,6 +4,7 @@ from datetime import datetime
 
 
 
+
 def sort_by_date(path):
     files = os.listdir(path) #List the files in the directory
     for file in files: #Walk over the files in the directory
